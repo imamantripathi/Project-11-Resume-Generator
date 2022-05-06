@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="cv-form">
       <h1 class="text-center my-2">Resume Generator</h1>
       <div class="row">
         <div class="col-md-6">
@@ -47,6 +47,10 @@
               rows="5"
             >
             </textarea>
+          </div>
+          <div class="form-group mt-3">
+            <label for="">Select your photo</label>
+            <input type="file" id="imageField" class="form-control" />
           </div>
           <p class="text-secondary my-3">Important Links</p>
 
@@ -84,10 +88,10 @@
           <h3>Professional Information</h3>
 
           <div class="form-group">
-            <label for="objField">Objective</label>
+            <label for="objectiveField">Objective</label>
             <textarea
               placeholder="Enter here !"
-              id="objField"
+              id="objectiveField"
               class="form-control"
               rows="5"
             >
@@ -126,10 +130,108 @@
         </div>
       </div>
       <div class="container text-center mt-3 mb-5">
-        <div class="btn btn-primary btn-lg">Generate CV</div>
+        <div class="btn btn-primary btn-lg" onclick="generateCV()">
+          Generate CV
+        </div>
       </div>
     </div>
-
+    <!-- CV Template  -->
+    <div class="container-fluid" id="cv-template">
+      <div class="row">
+        <div class="col-md-4 py-5 background text-center">
+          <!-- first col -->
+          <img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/12-peoples-avatars/my-account.svg"
+            class="img-fluid myimg"
+            id="imageT"
+            alt="Profile Picture"
+          />
+          <div class="container">
+            <p id="nameT1">Aman Tripathi</p>
+            <p id="contactT">+912216406617, +32458484832</p>
+            <p id="addressT">In front of HDF Bank, Firozpur, Punjab</p>
+            <hr />
+            <p><a href="#" id="fbT">Facebook </a></p>
+            <p><a href="#" id="instaT">Instagram</a></p>
+            <p><a href="#" id="linkedT">LinkedIn</a></p>
+          </div>
+        </div>
+        <div class="col-md-8 py-5">
+          <h1
+            class="text-center"
+            id="nameT2"
+            style="font-weight: 800; font-size: 50px"
+          >
+            Aman Tripathi
+          </h1>
+          <div class="card mt-5">
+            <div class="card-header background"><h3>Objective</h3></div>
+            <div class="card-body">
+              <p id="objectiveT">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
+                earum dolor accusamus dolorum nam aliquam accusantium dolore
+                libero magnam voluptates quam praesentium corporis laboriosam
+                mollitia, reiciendis tempore esse. Accusamus, dolorum!
+              </p>
+            </div>
+          </div>
+          <!-- Work Experience -->
+          <div class="card mt-5">
+            <div class="card-header background"><h3>Work Experience</h3></div>
+            <div class="card-body">
+              <ul id="weT">
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  odit numquam deserunt?
+                </li>
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  odit numquam deserunt?
+                </li>
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  odit numquam deserunt?
+                </li>
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  odit numquam deserunt?
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Academic Qualification -->
+          <div class="card mt-5">
+            <div class="card-header background">
+              <h3>Academic Qualification</h3>
+            </div>
+            <div class="card-body">
+              <ul id="aqT">
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  odit numquam deserunt?
+                </li>
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  odit numquam deserunt?
+                </li>
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  odit numquam deserunt?
+                </li>
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  odit numquam deserunt?
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- second col -->
+          <div class="container mt-3 text-center">
+            <button class="btn background" onclick="printCV()">print CV</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

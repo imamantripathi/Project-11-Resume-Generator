@@ -1,0 +1,12 @@
+#cv-template{
+    display: none;
+}
+.myimg{
+    
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px white;
+}
+.background{
+    background-color: chartreuse;
+}
